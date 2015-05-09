@@ -1,9 +1,6 @@
 # import the data
 hpc.df <- read.table("data/household_power_consumption.txt", sep=";", header=TRUE,
                      colClasses=c("character", "character", rep("numeric", 7)), na.strings=c("?"))
-#back it up before attempting conversion
-raw.df <- hpc.df
-#hpc.df <- raw.df
 
 # Convert date and time columns
 hpc.df$Date <- as.Date(hpc.df$Date, format="%d/%m/%Y")
