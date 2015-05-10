@@ -23,11 +23,11 @@ par(mfrow=c(2,2))
 
 #plot 1
 with(hpc_feb.df, plot(Datetime, Global_active_power, type="n",
-                      ylab="Global active power", xlab=""))
+                      ylab="Global Active Power", xlab=""))
 with(hpc_feb.df, lines(Datetime, Global_active_power, type="S"))
 
 #plot 2
-with(hpc_feb.df, plot(Datetime, Voltage, type="n"))
+with(hpc_feb.df, plot(Datetime, Voltage, type="n", xlab="datetime"))
 with(hpc_feb.df, lines(Datetime, Voltage, type="S"))
 
 #plot 3
@@ -38,9 +38,9 @@ with(hpc_feb.df, lines(Datetime, Sub_metering_2, type="S", col="red"))
 with(hpc_feb.df, lines(Datetime, Sub_metering_3, type="S", col="blue"))
 with(hpc_feb.df,legend(x="topright",
                        c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
-                       col=c("black","red","blue"), lty=1,lwd=1))
+                       col=c("black","red","blue"), lty=1,lwd=1, bty="n"))
 #plot 4
-with(hpc_feb.df, plot(Datetime, Global_reactive_power, type="n"))
+with(hpc_feb.df, plot(Datetime, Global_reactive_power, type="n", xlab="datetime"))
 with(hpc_feb.df, lines(Datetime, Global_reactive_power, type="S"))
 
 
